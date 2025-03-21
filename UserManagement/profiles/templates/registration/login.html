@@ -2,9 +2,9 @@
 {% block title %}Login Page{% endblock title %}
 {% block content %}
     <div class="container">
-        <form method="post">
+        <form method="post" class='forms'>
             {% csrf_token %}
-            
+            <h4 class="text-decoration-underline">Login Here</h4>
             <div class="form-group">
                 <label for="{{ form.username.id_for_label }}">Username</label>
                 {{ form.username }}

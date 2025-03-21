@@ -1,6 +1,25 @@
 {% extends 'profiles/base.html' %}
 {% block title %}Dashboard{% endblock title %}
 {% block content %}
-    <h1>Hello {{user.username}}</h1>
-    <h2>Welcome to your dashboard</h2>
+    <div class="dashboard-container">
+        <h4 class="mb-3">Welcome, {{ user.username }}!</h4>
+        <h5>Your Credentials:</h5>
+        <div class="user-details">
+            
+            <ul class="list-group">
+                <div class="list-items">
+                    <li class="list-group-item"><strong>Username:</strong> {{ user.username }}</li>
+                </div>
+
+                <div class="list-items">
+                    <li class="list-group-item"><strong>Email:</strong> {{ user.email }}</li>
+                </div>
+                
+                <div class="list-items">
+                    <li class="list-group-item"><strong>Account created on:</strong> {{ user.date_joined|date:"F j, Y" }}</li>
+                </div>
+                
+            </ul>
+        </div>
+    </div>
 {% endblock content %}
