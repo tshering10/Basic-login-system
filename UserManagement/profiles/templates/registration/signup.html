@@ -1,0 +1,12 @@
+{% extends 'profiles/base.html' %}
+{% block title %}Signup Page{% endblock title %}
+{% block content %}
+    <div class="container">
+        <form method='post'>
+            {% csrf_token %}
+            {{ form }}
+            <button type='submit'>Register</button>
+        </form>
+    </div>
+{% endblock content %}
+
