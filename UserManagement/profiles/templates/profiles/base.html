@@ -11,6 +11,9 @@
     <link rel="stylesheet" href="{% static "css/styles.css" %}">
     <!--fonts-->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  
+
+
 
     <title>{% block title %}{% endblock title %}</title>
     <style>
@@ -49,7 +52,7 @@
                   <a class="nav-link active fw-bold" aria-current="page" href="{% url "login" %}">Login</a>
                 </li>
                 <li class="nav-item mr-5">
-                  <a class="nav-link active fw-bold" aria-current="page" href="{% url "signup" %}">Signup</a>
+                  <a class="nav-link active fw-bold" aria-current="page" href="{% url "signup" %}">Register</a>
                 </li>
               {% endif %}
           

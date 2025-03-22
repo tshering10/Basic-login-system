@@ -4,13 +4,15 @@
 
 {% block content %}
     <div class="text-center mt-5">
-        <h1>Welcome to the User Management System</h1>
+        <h1 class='fw-bold'> User Management System</h1>
         <p class="lead">Effortlessly manage your users and their data with our intuitive platform.</p>
         <p>This system allows you to securely log in, access user profiles, and handle all your user management needs with ease.</p>
         <p>Quickly jump in to manage your users.</p>
         <form action="{% url "signup" %}">
             {% csrf_token %}
             <a href="{% url "signup" %}" class='btn btn-primary'>Get Started</a>
+            <a href="{% url "login" %}" class='btn btn-secondary p-'>Sign In</a>
         </form>
+        
     </div>
 {% endblock content %}
